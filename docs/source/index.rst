@@ -1,7 +1,7 @@
 Understanding LLVM Transformation Passes
 ===================================
 
-Yafan Huang is testing testing testing testing hahaha.
+Yafan Huang 黄亚凡，一二三四五六七，七六五四三二一。
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
 that creates recipes mixing random ingredients.
@@ -15,7 +15,7 @@ how to :ref:`installation` the project.
 
    This project is under active development.
 
-Contents
+About
 --------
 
 .. toctree::
@@ -27,3 +27,15 @@ Contents
    LLVM-transformation-passes/index
    usage
    api
+
+Contributing
+--------
+
+License
+--------
+
+References
+--------
+
+
+
