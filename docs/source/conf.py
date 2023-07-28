@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Understanding LLVM Transformation Passes'
+copyright = '2023, Yafan Huang'
+author = 'Yafan Huang'
 
 release = '0.1'
 version = '0.1.0'
