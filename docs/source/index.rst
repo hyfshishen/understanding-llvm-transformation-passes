@@ -19,6 +19,11 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 1
+   :caption: Contents:
 
+   LLVM-a-quick-primer/index
+   compiler-basics/index
+   LLVM-transformation-passes/index
    usage
    api
