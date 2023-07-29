@@ -31,12 +31,12 @@ About
    Analysis passes，打个比方 ``-print-function``，用 stderr 打印出来目标程序中所有的 function 信息。
    可以看到，utility/analysis passes 旨在分析程序和帮助用户更好的理解程序，从优化的角度对程序没有提升，所以本文只 focus 在 transformation passes 上。
 - 如果我只对某个 transformation pass 感兴趣，我要花多久读这个文档？
-   只理解一个pass的话，那么十分钟应该足够了。
+   只理解一个pass的话，十分钟应该足够了。对于 :doc:`LLVM-transformation-passes/index` 的每个 pass，我都标注了理解它需要那些 :doc:`compiler-basics/index` 里的知识。
+   比如学习 ``-licm`` pass 只需要了解什么是 loop-invariant code motion 就好了，并不需要把所有知识点全部理解一遍，可以节省一些时间。
 - 我读完这个文档之后能不能成为一个什么 LLVM pass 都会写的大佬？
-   这个文档其实只准备了对应的知识
-- 为什么文档中出现大量的中英混杂？
-   这确实会有点影响观感。不过我感觉很多英文名词或者动词是很难直译的，强行翻译可能就没内味儿了。
-
+   呃，其实并不能（因为我自己也不是什么 pass 都可以写出来的天才）。
+   读完之后只能说对 LLVM 所有的 transformation passes 和很多 compiler optimization 的技术都非常了解。
+   如果说想成为写 pass 的大佬，那么还是得一点一点读和细扣官方文档和源代码。心急是吃不了热豆腐的。
 
 Content
 --------
