@@ -31,7 +31,7 @@ About
    Analysis passes，打个比方 ``-print-function``，用 stderr 打印出来目标程序中所有的 function 信息。
    可以看到，utility/analysis passes 旨在分析程序和帮助用户更好的理解程序，从优化的角度对程序没有提升，所以本文只 focus 在 transformation passes 上。
 - 如果我只对某个 transformation pass 感兴趣，我要花多久读这个文档？
-   几分钟就好了
+   只理解一个pass的话，那么十分钟应该足够了。
 - 我读完这个文档之后能不能成为一个什么 LLVM pass 都会写的大佬？
    这个文档其实只准备了对应的知识
 - 为什么文档中出现大量的中英混杂？
