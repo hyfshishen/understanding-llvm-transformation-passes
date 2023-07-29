@@ -25,9 +25,9 @@ About
    如果对 LLVM 完全一无所知的，可以先读第一个文档，大概只要花半个小时就可以对 LLVM 的基本概念有一些了解了（如果你耐心的话还可以学会写一个简单的 pass）。
    如果对 LLVM 有一些了解，但是对一些 compiler optimization 不太了解的，可以看一看第二个文档，也是大概半个小时就可以了；compiler optimization 包罗万象而且还在不断进步，我很难把所有的知识都放进来（我自己也不会啊），所以这里只放了和后面的 pass 相关的知识点。
 - 为什么只包括 transformation passes？其他的比如 utility passes 或者 analysis passes 呢？
-   一般我们写完代码，并且用 optimizer 对代码的 IR 优化的时候，只有 transformation passes 可以真正地维持程序原本功能的情况下 transformate 程序，并提升程序的 performance。
+   一般我们写完代码，并且用 optimizer 对代码的 IR 优化的时候，只有 transformation passes 可以真正地维持程序原本功能的情况下 transform 程序，并提升程序的 performance。
    其他的 LLVM 官方 passes 比如 utility/analysis passes 主要以分析为主，而对程序的性能没有改变。
-   Utility passes，打个比方 ``-view-cfg``，其目的是用一种可视化脚本打印一下当前程序的 control-flow graph。
+   Utility passes，打个比方 ``-view-cfg``，其目的是用一种可视化脚本（graphViz）打印一下当前程序的 control-flow graph。
    Analysis passes，打个比方 ``-print-function``，用 stderr 打印出来目标程序中所有的 function 信息。
    可以看到，utility/analysis passes 旨在分析程序和帮助用户更好的理解程序，从优化的角度对程序没有提升，所以本文只 focus 在 transformation passes 上。
 - 如果我只对某个 transformation pass 感兴趣，我要花多久读这个文档？
