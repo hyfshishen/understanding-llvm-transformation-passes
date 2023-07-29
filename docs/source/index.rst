@@ -52,7 +52,6 @@ License
 
 References
 --------
-非常感谢下面的链接，在学习的过程中使我受益良多。
 .. [#ref1] LLVM Transformation Passes: https://llvm.org/docs/Passes.html#transform-passes
 .. [#ref2] Apple Writing an LLVM Pass: https://opensource.apple.com/source/clang/clang-137/src/docs/WritingAnLLVMPass.html
 .. [#ref3] LLVM Optimization Slides: https://llvm.org/devmtg/2020-09/slides/A_Deep_Dive_into_Interprocedural_Optimization.pdf
