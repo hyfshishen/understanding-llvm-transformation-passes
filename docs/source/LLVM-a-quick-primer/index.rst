@@ -53,7 +53,7 @@ LLVM IR 主要有三层 components，分别是 function，basic block (BB)，和
 
 可以看到，这个程序的 LLVM IR 和 C code 一样都只有一个 ``main`` function；这个 function 同样只有一个 basic block；而这个 basic block 里有四个 instructions，他们的类型分别是 ``load``， ``mul``， ``store``， 和 ``ret``。
 
-.. code-block:: llvm-installation
+.. code-block:: llvm
    @variable = global i32 21          ; define global variable, in LLVM IR global variable starts with '@'
 
    define i32 @main() {
