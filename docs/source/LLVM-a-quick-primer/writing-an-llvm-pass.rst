@@ -1,4 +1,4 @@
-Usage
+Writing an LLVM Pass
 =====
 
 .. _installation:

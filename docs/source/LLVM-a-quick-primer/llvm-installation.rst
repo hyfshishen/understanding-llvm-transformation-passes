@@ -1,4 +1,4 @@
-Usage
+LLVM Installation
 =====
 
 .. _installation:
