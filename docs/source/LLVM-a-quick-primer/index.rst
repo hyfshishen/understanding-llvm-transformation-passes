@@ -35,9 +35,9 @@ LLVM IR 有两种格式，分别是 human-readable ``.ll`` 和 binary code ``.bc
 这两种格式之间是可以相互转换的，我们这里的解释主要 focus 在 ``.ll`` 上。
 LLVM IR 主要有三层 components，分别是 function，basic block (BB)，和 instruction。
 
-- Function：一个程序的 LLVM IR 可能由多个 function 组成。在大多数情况下，LLVM IR 层级的 function 都是和 source code 上 function 的一一对应的。
-- Basic block (BB)：一个 function 由一个或者多个 basic block 组成。Basic block 同样也是记录 LLVM IR 中 branching 信息和 control-flow 关系的最小单位。
-- Instruction：一个 basic block 由一个或多个 instruction 组成。每个 instruction 都有自己对应的 type 和 variables。
+- **Function**: 一个程序的 LLVM IR 可能由多个 function 组成。在大多数情况下，LLVM IR 层级的 function 都是和 source code 上 function 的一一对应的。
+- **Basic block (BB)**: 一个 function 由一个或者多个 basic block 组成。Basic block 同样也是记录 LLVM IR 中 branching 信息和 control-flow 关系的最小单位。
+- **Instruction**: 一个 basic block 由一个或多个 instruction 组成。每个 instruction 都有自己对应的 type 和 variables。
 
 下面给个例子来帮助认识一下 LLVM IR。下面有两段代码，分别是一个 C 程序的 source code 和其对应的 LLVM IR。
 
