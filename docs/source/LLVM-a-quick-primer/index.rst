@@ -24,7 +24,7 @@ LLVM 自从2004年被 Chris Lattner 提出之后已经迭代了20年，现在已
    LLVM compiler infrastructure
 
 
-LLVM Intermediate Representation (IR)
+LLVM IR and Pass
 --------
 Intermediate Representation (IR) 是 LLVM 使用在 common optimizer（以后都简称 optimizer了）层级上的一种中间表示（也就是一种特定的 programming language）。
 LLVM IR 表现为 a set of instructions；虽然它不是真正意义的的 machine-level assembly code，但是其实也差不太多。
@@ -54,6 +54,7 @@ LLVM IR 主要有三层 components，分别是 function，basic block (BB)，和
 可以看到，这个程序的 LLVM IR 和 C code 一样都只有一个 ``main`` function；这个 function 同样只有一个 basic block；而这个 basic block 里有四个 instructions，他们的类型分别是 ``load``， ``mul``， ``store``， 和 ``ret``。
 
 .. code-block:: llvm
+   
    @variable = global i32 21          ; define global variable, in LLVM IR global variable starts with '@'
 
    define i32 @main() {
