@@ -135,8 +135,9 @@ Others
 --------
 .. toctree::
    :maxdepth: 1
-    llvm-installation
-    writing-an-llvm-pass
+
+   llvm-installation
+   writing-an-llvm-pass
 
 References
 --------
