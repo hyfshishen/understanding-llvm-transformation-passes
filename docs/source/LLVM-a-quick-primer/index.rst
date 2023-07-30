@@ -17,15 +17,19 @@ LLVM 的架构如下图所示。
 除此之外，common optimizer 还可以进行各种各样有趣的 program analysis 和 transformation （没错，也就是本文档专注的 pass），可以帮助用户更好的理解和优化代码。
 LLVM 自从2004年被 Chris Lattner 提出之后已经迭代了20年，现在已经是一个很大的 project 了。
 我们很多耳熟能详的工具都是 LLVM 的某个 subproject：比如著名的 C/C++ compiler Clang/Clang++，symbolic execution tool KLEE，等等。
+
 .. figure:: figures/llvm-structure.png
    :alt: LLVM compiler infrastructure
+
    LLVM compiler infrastructure
 
 
 LLVM Intermediate Representation (IR)
 --------
+
 .. figure:: figures/llvm-IR.jpeg
    :alt: LLVM compiler infrastructure and IR
+   
    LLVM compiler infrastructure and IR
 
 
