@@ -23,36 +23,43 @@ LLVM Installation
 
 不过对于比较新的 LLVM （比如 ≥ 15.0.0）安装的时候得小心点，如果不指定 subproject 的话可能一下子 50GB 就出去了。
 
-Writing an LLVM Pass
+Writing ``CallCount`` Pass
 ------------
+因为这里有太多专有名词和符号，所以这一块就全用英文来写了（中英文因为符号和字体不同，写在一起会显得有点乱）。
+
+1. Create a new folder for ``CallCount`` pass and add this folder to ``CMakeLists.txt``.
+   First, create a folder for this pass.
+
+   .. code-block:: console
+
+      $ # We assume that you have already installed LLVM 3.4 via above guidance.
+      $ cd $YOUR-LOCAL-PATH$/llvm/lib/Transforms                               # change directory to the main folder that contains the LLVM Passes
+      $ ls                                                                     # list files and folders in current path
+      CMakeLists.txt  InstCombine      IPO            Makefile  Scalar  Vectorize
+      Hello           Instrumentation  LLVMBuild.txt  ObjCARC   Utils
+      $ # Except file CMakeList.txt, LLVMBuild.txt, and Makefile. Each of the rest folders denotes an individual LLVM Pass.
+      $ mkdir CallCount
+
+   Then, add path of this folder into current ``CMakeLists.txt`` (in the same path of this folder).
+
+   .. code-block:: console
+
+      add_subdirectory(Utils)
+      add_subdirectory(Instrumentation)
+      add_subdirectory(InstCombine)
+      add_subdirectory(Scalar)
+      add_subdirectory(IPO)
+      add_subdirectory(Vectorize)
+      add_subdirectory(Hello)
+      add_subdirectory(ObjCARC)
+      add_subdirectory(CallCount)                                              # add path of folder that contains our target LLVM Pass
+
+2. Write the source code of  ``CallCount`` pass.
+3. Prepare for compilation.
+4. Compile ``CallCount`` pass.
+5. Load ``CallCount`` pass with LLVM optimizer ``opt``.
 
 References
 --------
 .. [#ref1] Writing an LLVM Pass: https://llvm.org/docs/WritingAnLLVMPass.html
-
-To use Lumache, first install it using pip:
-
-.. code-block:: console
-
-   (.venv) $ pip install lumache
-
-Creating recipes
-----------------
-
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
-
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
 
