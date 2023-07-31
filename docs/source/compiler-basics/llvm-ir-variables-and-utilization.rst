@@ -86,6 +86,38 @@ Accessing Address-taken Variables
 --------
 Address-taken variables 包括 global variables 和 local variables 里的 Stack/Alloca instructions。
 需要使用 ``alloca``，  ``store``，和 ``load`` 这三个 instructions 去 access 他们。
+我们用一个如下的代码样例来解释一下。
+首先给出这段代码的 C code：
+
+.. code-block:: C
+
+    int add(int a, int b) {
+        int result = a + b;
+        return result;
+    }
+
+下面是这段 C code compile 成的 LLVM IR：
+
+.. code-block:: llvm
+
+    define i32 @add(i32 %a, i32 %b) {
+    entry:
+        ; Allocate space on the stack for the local variable 'result'
+        %result = alloca i32
+
+        ; Perform the addition and store the result in 'result'
+        %sum = add i32 %a, %b
+        store i32 %sum, i32* %result
+
+        ; Load the value from 'result' and return it
+        %loaded_result = load i32, i32* %result
+        ret i32 %loaded_result
+    }
+
+我们可以看到，使用这三个 instructions 在这个过程中的用法如下所示：
+- ``alloca``：开辟一块 memory space for a variable。
+- ``store``：操作完了之后把 register variable 放在某个 memory space。
+- ``load``：将一个 memory space 内的 variable 放在某个 register variable 里。
 
 
 References
