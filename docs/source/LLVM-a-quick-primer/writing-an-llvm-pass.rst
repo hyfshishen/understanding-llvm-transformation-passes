@@ -125,13 +125,69 @@ Writing ``CallCount`` Pass
       char CallCount::ID = 0;
       static RegisterPass<CallCount> X("CallCount", "Count call type instructions in given program IR", false, false);
                                                                                                    // "CallCount" is the unique flag of this pass while being loaded by opt command.
-   
 
-3. Prepare for compilation.
-4. Compile ``CallCount`` pass.
-5. Load ``CallCount`` pass with LLVM optimizer ``opt``.
+3. 接下来，我们准备 compile 一下刚写好的 pass。
+   同样地，我把我的解释都写在代码的 comments 里了。
+   首先，在和 ``Hello.cpp`` 相同的目录（也就是 ``CallCount`` 文件夹）里创建对应的 ``CMakeLists.txt`` 和 ``Makefile``。
+   
+   .. code-block:: console
+
+      $ # Usually, the pass folder (i.e. CallCount here) should contain three files:
+      $ #     Hello.cpp       --  The souce code of this LLVM Pass. Of course, you can give it another name. We have wrote as above.
+      $ #     CMakeLists.txt  --  Link the source code with the compiled LLVM Pass. The LLVM Pass is .so format.
+      $ #     Makefile        --  The compilation logic under this whole LLVM project.
+      $ # So let's create the CMakeLists.txt and Makefile.
+      $ touch CMakeLists.txt Makefile
+
+   然后，我们写一下 ``CMakeLists.txt`` 里面的内容。
+
+   .. code-block:: console
+
+      add_llvm_loadable_module(CallCount      # The name of compiled LLVM Pass. So the output will be CallCount.so after the compilation.
+         Hello.cpp                            # The source code of LLVM Pass.
+      )
+
+   我们再写一下 ``Makefile`` 里的内容。
+
+   .. code-block:: console
+
+      LEVEL = ../../..
+      LIBRARYNAME = CallCount                 # Also the name of compiled LLVM Pass. This should be consistent with the name in CMakeLists.txt.
+      LOADABLE_MODULE = 1
+      USEDLIBS =
+
+      # If we don't need RTTI or EH, there's no reason to export anything
+      # from the hello plugin.
+      ifneq ($(REQUIRES_RTTI), 1)
+      ifneq ($(REQUIRES_EH), 1)
+      EXPORTED_SYMBOL_FILE = $(PROJ_SRC_DIR)/Hello.exports
+      endif
+      endif
+
+      include $(LEVEL)/Makefile.common
+   
+   现在我们就可以开始 compile 我们刚写好的 pass 了。
+   具体命令如下所示（其实也就两条 commands），先移动一下路径，然后再 ``make`` 一下。
+
+   .. code-block:: console
+
+      $ cd $YOUR-LOCAL-PATH$/llvm/build      # change directory to where we build this LLVM project
+      $ make -j$(nproc)                      # compile LLVM with multi-threads
+
+4. 我们现在尝试用 LLVM optimizer ``opt`` load 一下 compile 好的 pass。
+   一旦 compilation 完成的时候，你可以在 ``$YOUR-LOCAL-PATH$/llvm/build/lib/`` 里找到一个新生成的文件 ``CallCount.so``，这也就是 compile 好的 pass了。
+   我们以一个叫 ``pathfinder.ll`` 的 LLVM IR 举例（recall that ``opt`` takes IR as both input and output），运行的命令如下所示：
+
+   .. code-block:: console
+
+      $ YOUR-LOCAL-PATH$/llvm/build/bin/ -load $YOUT-LOCAL-PATH$/llvm/build/lib/CallCount.so pathfinder.ll -CallCount -o output.ll
+      $ # You can know how many "call" type instructions are in pathfinder.ll :)
+
+
+上述所有代码可以在个 GitHub repo [#ref2]_ 找到。完结撒花！
 
 References
 --------
 .. [#ref1] Writing an LLVM Pass: https://llvm.org/docs/WritingAnLLVMPass.html
+.. [#ref2] Source code of ``CallCount`` pass: https://github.com/hyfshishen/LLFI-Quick-Start
 
