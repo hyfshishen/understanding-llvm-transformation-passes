@@ -139,7 +139,7 @@ Writing ``CallCount`` Pass
       $ # So let's create the CMakeLists.txt and Makefile.
       $ touch CMakeLists.txt Makefile
 
-   然后，我们写一下 ``CMakeLists.txt`` 里面的内容。
+   然后，我们写一下 ``CMakeLists.txt`` 里面的内容：
 
    .. code-block:: console
 
@@ -147,7 +147,7 @@ Writing ``CallCount`` Pass
          Hello.cpp                            # The source code of LLVM Pass.
       )
 
-   我们再写一下 ``Makefile`` 里的内容。
+   我们再写一下 ``Makefile`` 里的内容：
 
    .. code-block:: console
 
