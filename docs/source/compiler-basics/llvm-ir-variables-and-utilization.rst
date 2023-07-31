@@ -115,6 +115,7 @@ Address-taken variables 包括 global variables 和 local variables 里的 Stack
     }
 
 我们可以看到，使用这三个 instructions 在这个过程中的用法如下所示：
+
 - ``alloca``：开辟一块 memory space for a variable。
 - ``store``：操作完了之后把 register variable 放在某个 memory space。
 - ``load``：将一个 memory space 内的 variable 放在某个 register variable 里。
