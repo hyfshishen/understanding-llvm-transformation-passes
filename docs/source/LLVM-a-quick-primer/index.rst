@@ -131,8 +131,11 @@ Useful LLVM Commands
    $                                                                # CallCount.so is the LLVM Pass we want to load.
    $                                                                # -CallCount is the unique flag of this Pass registered in current LLVM project.
    $                                                                # The output.ll is bitcode format, which can be disassembler to readable IR via llvm-dis.
+
 Others
 --------
+如果你想顺着这个文档的思路尝试一下写一个简单的 LLVM pass 的话，可以看一看下面的文档。
+
 .. toctree::
    :maxdepth: 1
 
