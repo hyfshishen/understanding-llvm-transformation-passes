@@ -8,8 +8,6 @@ Compiler Optimization Basics
 如果你有系统学习这一块知识的需求的话，可以看一下这个文档 [#ref1]_，写的超级棒。
 当然，如果你真的只想看某一个特定的 pass，不需要了解任何别的 pass。也可以直接移步 :doc:`../LLVM-transformation-passes/index` 里对应的位置，那里写了了解当前的 pass 哪些 basics 是必须的。这样的回溯学习应该也能提升一些效率。
 
-
-Contents
 --------
 
 .. toctree::
