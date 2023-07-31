@@ -3,6 +3,8 @@ LLVM IR Variables and Utilization
 
 LLVM IR Variables
 --------
+LLVM IR 里有两种 variables，分别是 global variables 和 local variables，下面介绍一下。
+
 - **Global Variable:**
     
     LLVM IR 的 global variable 的格式是 ``@XXX``，比如 ``@global_variable``，它的 lifetime 是 entire program code。
@@ -26,9 +28,13 @@ LLVM IR Variables
         他们指向一个 memory on the stack，并且访问的时候类似 global variables 都需要 ``store`` 和 ``load`` instructions。
         他们的lifetime是entire function。
 
+    
+
 
 Accessing Address-taken Variables
 --------
+Address-taken variables 包括 global variables 和 local variables 里的 Stack/Alloca instructions。
+需要使用 ``alloca``，  ``store``，和 ``load`` 这三个 instructions 去 access 他们。
 
 Local Variables Naming Rules
 --------
