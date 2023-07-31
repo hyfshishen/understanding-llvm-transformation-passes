@@ -76,61 +76,61 @@ LLVM pass 是一个非常强大的基于 LLVM IR 的工具。理论上只要你�
 
    LLVM compiler infrastructure and IR
 
-Userful LLVM Commands
+Useful LLVM Commands
 --------
 ``clang``: LLVM C compiler
 
 .. code-block:: console
 
-   $ clang hello-world.c -o hello-world                                     # Compile C code to executable binary
-   $ clang -S -emit-llvm hello-world.c -o hello-world.ll                    # Compile C code to readable IR
+   $ clang hello-world.c -o hello-world                             # Compile C code to executable binary
+   $ clang -S -emit-llvm hello-world.c -o hello-world.ll            # Compile C code to readable IR
 
 ``clang++``: LLVM C++ compiler
 
 .. code-block:: console
 
-   $ clang++ hello-world.cpp -o hello-world                                 # Compile C++ code to executable binary
-   $ clang++ -S -emit-llvm hello-world.cpp -o hello-world.ll                # Compile C++ code to readable IR
+   $ clang++ hello-world.cpp -o hello-world                         # Compile C++ code to executable binary
+   $ clang++ -S -emit-llvm hello-world.cpp -o hello-world.ll        # Compile C++ code to readable IR
 
 ``llvm-as``: Assembler
 
 .. code-block:: console
 
-   $ llvm-as hello-world.ll -o hello-world.bc                               # Compile readable IR to bitcode format
+   $ llvm-as hello-world.ll -o hello-world.bc                       # Compile readable IR to bitcode format
 
 ``llvm-dis``: Disassembler
 
 .. code-block:: console
 
-   $ llvm-dis hello-world.bc -o hello-world.ll                              # Compile bitcode format to readable IR
+   $ llvm-dis hello-world.bc -o hello-world.ll                      # Compile bitcode format to readable IR
 
 ``llvm-link``: Linker
 
 .. code-block:: console
 
-   $ llvm-link -S hello.ll world.ll -o hello-world.ll                       # Link two IRs into a unified one
+   $ llvm-link -S hello.ll world.ll -o hello-world.ll               # Link two IRs into a unified one
 
 ``llc``: Static compiler
 
 .. code-block:: console
 
-   $ llc hello-world.ll -o hello-world.s                                    # Compile IR into assembly code for a specified architecture
+   $ llc hello-world.ll -o hello-world.s                            # Compile IR into assembly code for a specified architecture
 
 ``lli``: Directly execute LLVM IR
 
 .. code-block:: console
 
-   $ lli pathfinder.ll 1000 10                                              # Directly execute Rodinia-pathfinder IR with input "1000 10" using a just-in-time compiler
+   $ lli pathfinder.ll 1000 10                                      # Directly execute Rodinia-pathfinder IR with input "1000 10" using a just-in-time compiler
 
 ``opt``: Optimizer，也是 load LLVM pass （官方提供的和自己手写的都可以）的最核心工具。我们本文档提到的所有 transformation pass 都可以用这个 command 来实现。
 有兴趣实现下面代码样例中提到的 ``CallCount`` LLVM pass的话可以移步这里： :doc:`writing-an-llvm-pass`。
 
 .. code-block:: console
 
-   $ opt -load ./CallCount.so pathfinder.ll -CallCount -o output.ll         # Load LLVM Pass for code transformation and optimization.
-                                                                            # CallCount.so is the LLVM Pass we want to load.
-                                                                            # -CallCount is the unique flag of this Pass registered in current LLVM project.
-                                                                            # The output.ll is bitcode format, which can be disassembler to readable IR via llvm-dis.
+   $ opt -load ./CallCount.so pathfinder.ll -CallCount -o output.ll # Load LLVM Pass for code transformation and optimization.
+                                                                    # CallCount.so is the LLVM Pass we want to load.
+                                                                    # -CallCount is the unique flag of this Pass registered in current LLVM project.
+                                                                    # The output.ll is bitcode format, which can be disassembler to readable IR via llvm-dis.
 Others
 --------
 .. toctree::
