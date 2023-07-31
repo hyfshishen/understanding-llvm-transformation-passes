@@ -4,7 +4,7 @@ A Quick Primer about LLVM
 
 这一章节会提供一些非常 basic 的 LLVM 相关的基础概念，也是学习 LLVM transformation passes 的前提。
 如果有兴趣的话，还可以顺着 :doc:`llvm-installation` 和 :doc:`writing-an-llvm-pass` 学习一下怎么安装 LLVM 并写一个非常简单的 pass。
-本章的知识主要来源于我之前在 CS:4980@UIowa 写的一个 Tutorial [#ref1]_，同时也感谢这个文档 [#ref2]_ 的帮助，写得太棒了。
+本章的知识主要来源于我之前在 `Dr. Guanpeng Li <https://cclinus.github.io/>`_ 的 CS:4980@UIowa 写的一个 Tutorial [#ref1]_，同时也感谢这个文档 [#ref2]_ 的帮助，写得太棒了。
 当然，如果你已经是 LLVM 大佬的话可以直接跳过这一章了。
 
 LLVM Compiler Infrastructure
@@ -128,9 +128,9 @@ Useful LLVM Commands
 .. code-block:: console
 
    $ opt -load ./CallCount.so pathfinder.ll -CallCount -o output.ll # Load LLVM Pass for code transformation and optimization.
-                                                                    # CallCount.so is the LLVM Pass we want to load.
-                                                                    # -CallCount is the unique flag of this Pass registered in current LLVM project.
-                                                                    # The output.ll is bitcode format, which can be disassembler to readable IR via llvm-dis.
+   $                                                                # CallCount.so is the LLVM Pass we want to load.
+   $                                                                # -CallCount is the unique flag of this Pass registered in current LLVM project.
+   $                                                                # The output.ll is bitcode format, which can be disassembler to readable IR via llvm-dis.
 Others
 --------
 .. toctree::
