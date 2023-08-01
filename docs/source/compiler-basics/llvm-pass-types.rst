@@ -19,7 +19,9 @@ Intraprocedural vs Interprocedural
 对于上面提及的这5种 pass 来说，他们的分类如下图所示：
 
 .. figure:: figures/pass-types.png
+   :align: center
    :alt: LLVM pass types
+   :width: 400px
 
    LLVM pass types
 

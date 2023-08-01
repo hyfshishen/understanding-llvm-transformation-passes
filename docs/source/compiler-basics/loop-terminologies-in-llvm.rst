@@ -15,6 +15,7 @@ LLVM Loop Definition
 比如，下图红圈内部就是一个 loop。它同时满足了条件：有一个 dominant 的 header，strongly-connected，并且 maximum subset。
 
 .. figure:: figures/loop-terminology.svg
+   :align: center
    :alt: Loop example
 
    Loop example

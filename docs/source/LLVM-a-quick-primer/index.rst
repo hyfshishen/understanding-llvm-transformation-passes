@@ -19,6 +19,7 @@ LLVM 自从2004年被 Chris Lattner 提出之后已经迭代了20年，现在已
 我们很多耳熟能详的工具都是 LLVM 的某个 subproject：比如著名的 C/C++ compiler Clang/Clang++，symbolic execution tool KLEE，等等。
 
 .. figure:: figures/llvm-structure.png
+   :align: center
    :alt: LLVM compiler infrastructure
 
    LLVM compiler infrastructure
@@ -72,6 +73,7 @@ LLVM 官方提供了很多现成的 transformation/utility/analysis pass，当�
 LLVM pass 是一个非常强大的基于 LLVM IR 的工具。理论上只要你可以把 pass 写的足够复杂，你甚至可以把一个给定的程序完全 transform 成另一个毫不相关的程序。
 
 .. figure:: figures/llvm-IR.jpeg
+   :align: center
    :alt: LLVM compiler infrastructure and IR
 
    LLVM compiler infrastructure and IR
