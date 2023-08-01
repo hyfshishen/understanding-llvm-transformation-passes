@@ -21,7 +21,7 @@ Intraprocedural vs Interprocedural
 .. figure:: figures/pass-types.png
    :align: center
    :alt: LLVM pass types
-   :width: 400px
+   :width: 300px
 
    LLVM pass types
 
