@@ -9,13 +9,19 @@ Value numbering 是一种常见的 compiler optimization technique，它通过 i
 .. code-block:: llvm
 
     ; original code
-    sum1 : int = a + b;
-    sum2 : int = b + a;
-    mul : int = sum1 * sum2;
+    define i32 @original_code(i32 %a, i32 %b) {
+        %sum1 = add i32 %a, %b
+        %sum2 = add i32 %b, %a
+        %mul = mul i32 %sum1, %sum2
+        ret i32 %mul
+    }
 
-    ; transformated code by value numbering
-    sum1 : int = a + b;
-    mul : int = sum1 * sum1;
+    ; transformed code by value numbering
+    define i32 @transformed_code(i32 %a, i32 %b) {
+        %sum1 = add i32 %a, %b
+        %mul = mul i32 %sum1_val, %sum1_val
+        ret i32 %mul
+    }
 
 References
 --------
