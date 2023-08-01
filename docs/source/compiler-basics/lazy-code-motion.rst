@@ -7,6 +7,7 @@ LLVM document 对此的解释是：so they aren’t executed on paths where thei
 下面结合一个例子来理解：这里 ``; Perform lazy code motion`` 代表了可以被移动到下一个 basic block 的 code，其目标位置是 ``; Lazily compute the result when needed``。
 
 .. code-block:: llvm
+    
     define i32 @foo(i32 %x, i32 %y) {
     entry:
         %add = add i32 %x, %y
