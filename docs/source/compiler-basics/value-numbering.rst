@@ -19,10 +19,10 @@ Value numbering 是一种常见的 compiler optimization technique，它通过 i
     ; transformed code by value numbering
     define i32 @transformed_code(i32 %a, i32 %b) {
         %sum1 = add i32 %a, %b
-        %mul = mul i32 %sum1_val, %sum1_val
+        %mul = mul i32 %sum1 %sum1
         ret i32 %mul
     }
 
 References
 --------
-.. [#ref1] Global value numbering in CS:6120@Cornell: https://www.cs.cornell.edu/courses/cs6120/2019fa/blog/global-value-numbering/
+.. [#ref1] Global Value Numbering in CS:6120@Cornell: https://www.cs.cornell.edu/courses/cs6120/2019fa/blog/global-value-numbering/
