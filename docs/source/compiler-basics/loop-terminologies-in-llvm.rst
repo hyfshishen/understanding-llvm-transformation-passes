@@ -14,7 +14,7 @@ LLVM Loop Definition
 
 比如，下图红圈内部就是一个 loop。它同时满足了条件：有一个 dominant 的 header，strongly-connected，并且 maximum subset。
 
-.. figure:: figures/loop-term.png
+.. figure:: figures/loop-terminology.svg
    :alt: Loop example
 
    Loop example
@@ -38,7 +38,7 @@ LLVM Simplify Form
 在 LLVM 中，Loop simplify form 指的是一个满足如下条件的 loop：
 
 - 一个 preheader。
-- 一个 latch（当然，也就只有一个 backedge）。
+- 一个 latch。当然，也就只有一个 backedge。
 - Exits 被 header dominant。即，这个 loop 的 exit 没有 loop 以外的其他 node 作为 predecessor。
 
 为什么要定义这种标准化的 loop 呢？因为 LLVM loop pass 对标准化的 loop 可以提供更高的优化效率。
