@@ -56,5 +56,5 @@ LICM 的原理其实很简单，就是把 loop 中不跟随 iteration 改变的�
 
 References
 --------
-.. [#ref1] Loop invariant code motion: https://en.wikipedia.org/wiki/Loop-invariant_code_motion
+.. [#ref1] Loop Invariant Code Motion: https://en.wikipedia.org/wiki/Loop-invariant_code_motion
 .. [#ref2] LICM in CS:6120@Cornell: https://www.cs.cornell.edu/courses/cs6120/2019fa/blog/loop-reduction/
