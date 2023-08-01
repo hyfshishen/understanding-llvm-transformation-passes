@@ -9,7 +9,7 @@ Critical Edges in CFG
 
 .. figure:: figures/cfg2.svg
    :alt: Critical edges
-   :width: 100px
+   :width: 200px
 
    Critical edges
 
