@@ -100,7 +100,7 @@ Loop Unrolling vs Loop Vectorization
 他们两个听起来很像，都是把原有的 loop 给拆开，在一次循环里执行多个操作，降低 branch penalty，进而提升程序的 performance。但是他们的设计理念是不同的：
 
 1. Loop unrolling 是一种 **instruction-level** 的操作，把原来原来多个循环能完成的事放在一个循环里的多个 instruction 里。它通过增加 code size，降低了 branch penalty，进而提升 performance。
-2. Loop vectorization是一种 **data-level** 的操作，用 vector 类型在一个循环内一次处理多个数据。它通过 SIMD instructions (i.e. vectorized operations) 提升了memory bandwidth utilization，降低了 branch penalty，进而提升 performance。
+2. Loop vectorization 是一种 **data-level** 的操作，用 vector 类型在一个循环内一次处理多个数据。它通过 SIMD instructions (i.e. vectorized operations) 提升了memory bandwidth utilization，降低了 branch penalty，进而提升 performance。
 
 所以很多时候他们其实是可以共同存在并提升程序性能的。
 
