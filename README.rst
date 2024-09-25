@@ -1,9 +1,7 @@
-Template for the Read the Docs tutorial
+Understanding LLVM Transformation Passes
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+This Chinese book aims to help understand transformation passes in LLVM compiler infrastructure.
+The book link can be found at: https://understanding-llvm-transformation-passes.readthedocs.io/en/latest/
 
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+- Author: Yafan Huang (in 2023 Summer)
