@@ -14,7 +14,7 @@ Description
 反之，如果说这个参数被写了：比如 input argument 是个动态 malloc 过的 int type pointer，且里面的数值都被大量修改了。
 那么 ``-argpromotion`` 就万万不能用了，因为写的值传不回去。
 
- ``-argpromotion`` 可以对 code 进行 recursive simplification，并且 eliminating 很多 ``load`` 还有 ``alloca``（尤其是对 C++ template code 尤其高效，比如STL）。
+``-argpromotion`` 可以对 code 进行 recursive simplification，并且 eliminating 很多 ``load`` 还有 ``alloca``（这对 C++ template code 尤其高效，比如STL）。
 
 Code Example
 --------
