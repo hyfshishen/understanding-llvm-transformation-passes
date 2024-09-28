@@ -50,7 +50,7 @@ Content
 
 Contributing
 --------
-这份文档是 `Yafan Huang <https://hyfshishen.github.io/>`_ 在2023暑假的业余时间写的，文档源代码被在 `Github <https://github.com/hyfshishen/understanding-llvm-transformation-passes>`__ 上。
+这份文档是 `Yafan Huang <https://hyfshishen.github.io/>`_ 在2023暑假和2024秋天的业余时间写的，文档源代码被在 `Github <https://github.com/hyfshishen/understanding-llvm-transformation-passes>`__ 上。
 如果你发现了这个文档中的任何错误或者是问题（当然能花时间读我就已经很荣幸了QwQ），欢迎邮件联系 yafan-huang *at* uiowa *dot* edu，多谢多谢！
 
 License
