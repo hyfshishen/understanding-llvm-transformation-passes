@@ -15,6 +15,54 @@ LLVM Transformation Passes
    :maxdepth: 1
 
    00-aggressive-dead-code-elimination
+   01-inline-for-always-inline-functions
+   02-promote-by-reference-arguments-to-scalars
+   03-basic-block-vectorization
+   04-profile-guided-basic-block-placement
+   05-break-critical-edges-in-cfg
+   06-merge-duplicate-global-constants
+   07-dead-code-elimination
+   08-dead-argument-elimination
+   09-dead-instruction-elimination
+   10-dead-store-elimination
+   11-deduce-function-attributes
+   12-dead-global-elimination
+   13-global-variable-optimizer
+   14-global-value-numbering
+   15-canonicalize-induction-variables
+   16-function-integration-inlining
+   17-partial-inliner
+   18-combine-redundant-instructions
+   19-combine-expression-patterns
+   20-internalize-global-symbols
+   21-sparse-conditional-constant-propagation
+   22-interprocedural-sparse-conditional-constant-propagation
+   23-jump-threading
+   24-loop-invariant-code-motion
+   25-delete-dead-loops
+   26-extract-loops-into-new-functions
+   27-loop-strength-reduction
+   28-rotate-loops
+   29-canonicalize-natural-loops
+   30-unroll-loops
+   31-unroll-and-jam-loops
+   32-unswitch-loops
+   33-loop-closed-ssa-form-pass
+   34-lower-atomic-intrinsic-to-non-atomic-form
+   35-lower-invokes-to-calls
+   36-lower-switchinsts-to-branches
+   37-promote-memory-to-register
+   38-merge-functions
+   39-unify-function-exits-nodes
+   40-remove-unused-exception-handling-info
+   41-reassociate-expressions
+   42-demote-all-values-to-stack-slots
+   43-scalar-placement-of-aggregates
+   44-simplify-the-cfg
+   45-code-sinking
+   46-strip-unused-function-prototypes
+   47-strip-all-symbols-from-a-module(including-others)
+   48-tail-call-elimination
 
 References
 --------
