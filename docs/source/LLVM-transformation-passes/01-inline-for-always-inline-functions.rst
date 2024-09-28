@@ -5,10 +5,10 @@ Description
 --------
 
 ``-always-inline`` pass 主要是进行把所有标记有 ``__always_inline`` 的 function 都在 IR level 上 inline 的一种 code transformation。
-这样，只有当用户执行 `opt -always-inline -S input.ll -o output.ll` 的时候，这些有标记的 function 才会被 inline。
-相比于 `inline` 这个function attribute 更灵活一些（因为它会在 compile 过程中被强行 inline）。
+这样，只有当用户执行 ``opt -always-inline -S input.ll -o output.ll`` 的时候，这些有标记的 function 才会被 inline。
+相比于 ``inline`` 这个function attribute 更灵活一些（因为它会在 compile 过程中被强行 inline）。
 
-inline 的意思就是把 callee function 中的每个 instruction 都给变成 caller function 中的 instruction，这样就解决了 function call 和 value return 的 overhead。
+**Inline** 的意思就是把 callee function 中的每个 instruction 都给变成 caller function 中的 instruction，这样就解决了 function call 和 value return 的 overhead。
 这里再解释一下 caller-callee 的关系，打个比方我的 ``main()`` function 调用了 ``vector_add()`` function；这里调用别人的 ``main()`` 就是 caller，另一个则是 callee。
 
 Code Example
