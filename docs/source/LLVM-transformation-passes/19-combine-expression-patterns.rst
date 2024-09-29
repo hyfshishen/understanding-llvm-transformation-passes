@@ -3,29 +3,13 @@
 
 Description
 --------
-假装这是一段解释。
+
+``-aggressive-instcombine`` 是一个比 ``-instcombine`` 更 aggressive 的 transformation pass。
+``-aggressive-instcombine`` 也不修改 program control-flow。
+除了 arithmetic 和 bitwise 的 combinmation 外（这些都是O(1)复杂度），他还能 combine 更复杂的 expression patterns。
+比如，一个 ``i8`` 的数字和一个整数相加，这里其实使用更简单的 ``i8`` 格式的 variable 就行了，所以这里 ``-aggressive-instcombine`` 会自动添加 TruncInst instruction 去 reduce the width of expressions。
 
 Code Example
 --------
 
-假装这是一段example。
-
-.. code-block:: C
-
-    // original loop
-    int x;
-    for (x = 0; x < 100; x++)
-    {
-        delete(x);
-    }
-
-    // loop after unrolling (stride size = 4)
-    int x; 
-    for (x = 0; x < 100; x += 5 )
-    {
-        delete(x);
-        delete(x + 1);
-        delete(x + 2);
-        delete(x + 3);
-        delete(x + 4);
-    }
+其实就是可以识别 expression pattern (e.g. bit truncate) 的更复杂的 ``-instcombine``，故原理相似，可以查看前文，这里便不再赘述。
