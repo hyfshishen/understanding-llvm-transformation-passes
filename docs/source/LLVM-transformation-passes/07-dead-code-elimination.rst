@@ -39,11 +39,12 @@ Code Example
 ``-adce`` transform 的 C code。
 
 .. code-block:: C
+
     int x = 10;
     int y;
 
     y=1;
 
-这里这个 controlf-low 其实是理论上可以执行到下一段的，但是在当前的常量赋值下一定不会执行 -- 因为 10+1 一定会被判定为 ``true``。
+这里这个 controlf-low 其实是理论上可以执行到下一段的，但是在当前的常量赋值下一定不会执行 -- 因为 ``10+1`` 一定会被判定为 ``true``。
 ``-adce`` 可以推理出来这个情况，然后去 remove 掉对应的 unneccessary control-flow； ``-dce`` 没有推理，所以就不改变这里程序的逻辑了（程序没变）。
 
