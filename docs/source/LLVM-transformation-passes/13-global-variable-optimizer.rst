@@ -33,7 +33,7 @@ Code Example
 
 .. code-block:: llvm
 
-@gVar1 = global i32 10, align 4 readnone   ; Read-only global variable
+    @gVar1 = global i32 10, align 4 readnone   ; Read-only global variable
 
     define i32 @example() {
         %result = load i32, i32* @gVar1
