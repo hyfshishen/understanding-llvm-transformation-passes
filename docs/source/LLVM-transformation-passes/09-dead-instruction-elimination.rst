@@ -38,7 +38,7 @@ Code Example
     }
 
 第上述例子中， ``%prod`` 和 function 最后的返回值 ``%sum`` 无关，所以可以被 ``-dce`` remove 掉，因为他从 code 的角度上来看已经 dead 了。
-但是从 instruction 的角度来看， ``%prod``这一个 instruction 并不是 dead 的，因为它还是调用了 ``%a`` 和 ``%b`` 这两个变量并且同时被变量 ``%sum2`` 所调用。
+但是从 instruction 的角度来看， ``%prod`` 这一个 instruction 并不是 dead 的，因为它还是调用了 ``%a`` 和 ``%b`` 这两个变量并且同时被变量 ``%sum2`` 所调用。
 
 现在我们来看第二个例子。
 
