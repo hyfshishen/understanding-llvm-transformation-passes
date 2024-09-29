@@ -16,14 +16,11 @@ Description
    :align: center
    :width: 300px
 
-   Breaking a critical edge [#ref1]_
+   Breaking a critical edge (`Original Link <https://nickdesaulniers.github.io/blog/2023/01/27/critical-edge-splitting/>`_)
 
 这样做的意义是什么呢？如果存在 critical edges 的话，这会造成 suboptimal 的 code generation，进而阻止其他的 compiler 的优化，从而影响性能。
 
 在 LLVM 的 implementation 中， ``-break-crit-edges`` 还可以同时 update forward dominator（包括set, immediate dominator, tree, and frontier），从而保持 IR 功能上的正确性。
-
-上面的图来自 reference： 
-.. [#ref1] Critical Edge Splitting: https://nickdesaulniers.github.io/blog/2023/01/27/critical-edge-splitting/
 
 Code Example
 --------
@@ -38,8 +35,8 @@ Code Example
         br i1 %cmp, label %iftrue, label %iffalse
 
         other:
-            ; Code for the other branch
-            br label %iffalse
+        ; Code for the other branch
+        br label %iffalse
 
     iftrue:
         ; Code for the true branch
@@ -62,17 +59,17 @@ Code Example
     split: ; I am a dummy BB, do nothing here :)
         br label %iffalse
 
-        other:
-            ; Code for the other branch
-            br label %ifflase
+    other:
+        ; Code for the other branch
+        br label %ifflase
 
     iftrue:
         ; Code for the true branch
         br label ......
 
     iffalse:
-            ; Code for the false branch
-            br label ......
+        ; Code for the false branch
+        br label ......
     }
 
 原理很简单，其实就是加入了一个 dummy BB。
