@@ -47,6 +47,7 @@ CS6120 `at` Cornell 的例子太好了，所以我这里直接拿过来用了 (`
 
 .. code-block:: llvm
 
+    ; the previous if-else branch is optimized here
         a: int = const 1;
         b: int = const 2;
         print b;
