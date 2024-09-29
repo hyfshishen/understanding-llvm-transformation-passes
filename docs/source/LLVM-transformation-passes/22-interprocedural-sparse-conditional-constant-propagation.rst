@@ -18,7 +18,7 @@ LLVM tutorial 有个例子特别好，可以在这个 `link <https://www.youtube
 .. figure:: figures/ipsccp.png
    :alt: Interprocedural Sparse Conditional Constant Propagation
    :align: center
-   :width: 500px
+   :width: 600px
 
    Interprocedural Sparse Conditional Constant Propagation
 
