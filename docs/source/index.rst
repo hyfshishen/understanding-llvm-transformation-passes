@@ -42,7 +42,7 @@ Content
 --------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    LLVM-a-quick-primer/index
    compiler-basics/index
