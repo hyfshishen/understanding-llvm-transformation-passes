@@ -15,6 +15,6 @@ LLVM 官方的 interprocedural optimization slides (`Original Link <https://llvm
 .. figure:: figures/partial-inliner.png
    :alt: Explaining partial inliner
    :align: center
-   :width: 350px
+   :width: 450px
 
    Explaining partial inliner, selectively inlining hot condition into caller function.
