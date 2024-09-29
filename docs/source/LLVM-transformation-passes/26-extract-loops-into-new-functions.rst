@@ -10,6 +10,8 @@ Description
 这个 pass 看起来和 performance optimization 没什么关系，事实上也确实没什么关系。
 这个 pass 其实就是在 debug phase 的 setting up bugpoints 的时候才有用。
 
+还有一个 pass 叫， ``-loop-extract-single`` ， 它和 ``-loop-extract`` 做的事非常接近，就不单开一个新 page 说了。
+
 Code Example
 --------
 
