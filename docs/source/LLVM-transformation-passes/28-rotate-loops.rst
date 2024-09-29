@@ -99,7 +99,7 @@ IR code level 我们已经可以感觉到什么了，因为 ``do-while`` 版本�
 .. figure:: figures/28-original-cfg.png
    :alt: Original CFG.
    :align: center
-   :width: 400px
+   :width: 280px
 
    Original control-flow graph.
 
@@ -108,7 +108,7 @@ IR code level 我们已经可以感觉到什么了，因为 ``do-while`` 版本�
 .. figure:: figures/28-transformed-cfg.png
    :alt: Transformed CFG.
    :align: center
-   :width: 400px
+   :width: 300px
 
    Control-flow graph after ``-loop-rotate`` .
 
