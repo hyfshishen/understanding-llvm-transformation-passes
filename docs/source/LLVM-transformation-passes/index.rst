@@ -8,7 +8,7 @@ LLVM Transformation Passes
 **2. 代码样例（Code Example）**。一般来说我们会用 LLVM IR 来写一下，transform 前 code 长啥样和 transform 后 code 长啥样。如果用 C 更直观的话我们就用 C 来解释了。
 
 因为 Pass 比较多，所以 我把 Reference 集中写在这里了。
-代码样例中的例子来源于，个人和 ChatGPT 疯狂的交互（然后再读 LLVM 文档 double check） [#ref1]_, LLVM 的官方文档 [#ref2]_，还有 Cornell CS:6120 [#ref3]_。
+代码样例中的例子来源于，直接写 code 然后编译，个人和 ChatGPT 疯狂的交互（然后再读 LLVM 文档 double check） [#ref1]_, LLVM 的官方文档 [#ref2]_，还有 Cornell CS:6120 [#ref3]_。
 好的，那么我们现在就可以开始了。
 
 .. toctree::
