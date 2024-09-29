@@ -14,13 +14,16 @@ Description
 .. figure:: figures/critical_edge_splitting.svg
    :alt: Breaking a critical edge
    :align: center
-   :width: 200px
+   :width: 300px
 
-   Breaking a critical edge
+   Breaking a critical edge [#ref1]_
 
 这样做的意义是什么呢？如果存在 critical edges 的话，这会造成 suboptimal 的 code generation，进而阻止其他的 compiler 的优化，从而影响性能。
 
 在 LLVM 的 implementation 中， ``-break-crit-edges`` 还可以同时 update forward dominator（包括set, immediate dominator, tree, and frontier），从而保持 IR 功能上的正确性。
+
+上面的图来自 reference： 
+.. [#ref1] Critical Edge Splitting: https://nickdesaulniers.github.io/blog/2023/01/27/critical-edge-splitting/
 
 Code Example
 --------
