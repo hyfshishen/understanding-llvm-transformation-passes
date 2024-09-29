@@ -3,29 +3,11 @@
 
 Description
 --------
-假装这是一段解释。
+
+``-inline`` pass 其实和 ``-always-inline`` pass 做的事情非常相似，都是把 callee function 的 body 给 inline 在 caller function 中，所以这里便不再赘述了。
+唯一的区别是， ``-always-inline`` 更 aggressive 一些 — 这会让很长的 function 也 ``inline``，导致 code size 非常长，让 compile 的代价变大； ``-inline`` 更 lightweight 一些，因为他会考虑 function size 等诸多因素。
 
 Code Example
 --------
 
-假装这是一段example。
-
-.. code-block:: C
-
-    // original loop
-    int x;
-    for (x = 0; x < 100; x++)
-    {
-        delete(x);
-    }
-
-    // loop after unrolling (stride size = 4)
-    int x; 
-    for (x = 0; x < 100; x += 5 )
-    {
-        delete(x);
-        delete(x + 1);
-        delete(x + 2);
-        delete(x + 3);
-        delete(x + 4);
-    }
+例子可以看 ``-always-inline`` 里的，这里便不再赘述了。

@@ -1,7 +1,7 @@
 ``-indvars``: Canonicalize Induction Variables
 =====
 
-在了解这个 pass 之前需要学习的背景知识是 :doc:`../loop-invariant-code-motion`， :doc:`../compiler-basics/ssa-form-in-llvm-ir`， 和 :doc:`../compiler-basics/loop-terminologies-in-llvm`。
+在了解这个 pass 之前需要学习的背景知识是 :doc:`../compiler-basics/loop-invariant-code-motion`， :doc:`../compiler-basics/ssa-form-in-llvm-ir`， 和 :doc:`../compiler-basics/loop-terminologies-in-llvm`。
 
 Description
 --------
