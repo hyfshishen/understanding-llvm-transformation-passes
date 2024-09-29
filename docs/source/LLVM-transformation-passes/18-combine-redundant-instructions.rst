@@ -7,7 +7,7 @@ Description
 ``-instcombine`` 做的 transformation 是将原有的 code 的 instructions 给 combine 成 fewer and simpler instructions，降低 code size 和 computation 的同时提升 runtime performance。
 这个 pass 不修改任何的 program control-flow，所以 basic block 的跳转不会发生改变。
 ``-instcombine`` focus 的主要是 numerical (specifically algebraic) instructions。
-此外， ``-instcombine`` 对于transformated code有如下的guarantees：
+此外， ``-instcombine`` 对于 transformated code 有如下的 guarantees：
 
 1. 如果一个 binary operator (including arithmetic and bitwise) 有一个 operand 是 constant，那么这个 constant 一定在右边 (只有 ``%y= add i32 %x, 3`` 一定没有 ``%y = add 3, i32 %32`` )。
 2. 如果多个 bitwise operator 有 constant operand，那么他们总会被 group 起来，而且顺序分别是：first ``shift``, and ``or`` , and ``and`` , finally ``xor`` .
