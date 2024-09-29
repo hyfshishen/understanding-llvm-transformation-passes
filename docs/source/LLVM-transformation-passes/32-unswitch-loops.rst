@@ -1,6 +1,8 @@
 ``-loop-unswitch``: Unswitch Loops
 =====
 
+在了解这个 pass 之前需要学习的背景知识是 :doc:`../compiler-basics/loop-transformation`。
+
 Description
 --------
 
