@@ -22,11 +22,14 @@ Description
 Code Example
 --------
 
-原始的 IR code。
+原始的 IR code。假定 ``%x`` 是一个 fixed number 11。
+那么下方 highlight 的 branch 是会一定被执行的那个， ``-jump-threading`` 会 merge 它，并且移除另一个一定不执行的 branch。
+
 
 .. code-block:: llvm
+    :emphasize-lines: 9,10,11
 
-    define i32 @foo(i32 %x) {
+    define i32 @foo(i32 %x) {       ; assume the input %x is a fixed number 11
         %cmp = icmp slt i32 %x, 10
         br i1 %cmp, label %then, label %else
 
@@ -49,10 +52,8 @@ Code Example
 
     define i32 @foo(i32 %x) {
         %cmp = icmp slt i32 %x, 10
-        %add1 = add i32 %x, 1
         %add2 = add i32 %x, 2
-        %result = select i1 %cmp, i32 %add1, i32 %add2
-        ret i32 %result
+        ret i32 %add2
     }
 
 简而言之，就是如果发现 basic block 的 control-flow 走向是固定的，就直接给 merge 掉有歧义的部分。

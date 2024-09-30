@@ -46,9 +46,10 @@ CS6120 `at` Cornell 的例子太好了，所以我这里直接拿过来用了 (`
 ``-sccp`` transform 过的 BRIL IR code。
 
 .. code-block:: llvm
+    :emphasize-lines: 3
 
     ; the previous if-else branch is optimized here
         a: int = const 1;
-        b: int = const 2;
+        b: int = const 2; ; The complex condition can be optimized into a const value assignment
         print b;
 
