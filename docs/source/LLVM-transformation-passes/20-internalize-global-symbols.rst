@@ -19,6 +19,7 @@ Code Example
 为什么是 internal 的呢？因为这会只有这个 function 内部可以 access 它，所以其实就没必要 global 都访问了。
 
 .. code-block:: llvm
+    :emphasize-lines: 1,4
 
     @internal_var = internal global i32 42
 

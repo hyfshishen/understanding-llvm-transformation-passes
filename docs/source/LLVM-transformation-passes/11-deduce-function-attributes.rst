@@ -30,6 +30,7 @@ Code Example
 ``nounwind`` 的意思包含：(1) not throwing exceptions and (2) not performing stack unwinding.
 
 .. code-block:: llvm
+    :emphasize-lines: 1
 
     ; Function Attrs: nounwind
     define void @example(i32* %ptr) {

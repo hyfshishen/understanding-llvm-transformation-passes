@@ -16,6 +16,7 @@ Code Example
 原始的 IR code。
 
 .. code-block:: llvm
+    :emphasize-lines: 1,9
 
     @gVar1 = global i32 10, align 4   ; Global variable with initial value 10
 
@@ -32,6 +33,7 @@ Code Example
 ``-globalopt`` transform 的 IR code。
 
 .. code-block:: llvm
+    :emphasize-lines: 1,9
 
     @gVar1 = global i32 10, align 4 readnone   ; Read-only global variable
 

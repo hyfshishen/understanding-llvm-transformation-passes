@@ -13,6 +13,7 @@ Code Example
 原始的 IR code。
 
 .. code-block:: llvm
+    :emphasize-lines: 1,8,12
 
     @gVariable = global i32 10   ; Global variable with initial value 10
 
