@@ -15,12 +15,12 @@ Code Example
 原始的 IR code。
 
 .. code-block:: llvm
+    :emphasize-lines: 12
 
     define void @foo(i32 %n) {
     entry:
         %i = alloca i32
         store i32 0, i32* %i
-
         br label %loop
 
     loop:
@@ -31,7 +31,6 @@ Code Example
         %load_i = load i32, i32* %i
         %add = add i32 %load_i, 1
         store i32 %add, i32* %i
-
         br label %loop
 
     exit:
@@ -41,14 +40,13 @@ Code Example
 ``-licm`` transform 的 IR code。
 
 .. code-block:: llvm
+    :emphasize-lines: 5
 
     define void @foo(i32 %n) {
     entry:
         %i = alloca i32
         store i32 0, i32* %i
-
         %load_i = load i32, i32* %i
-
         br label %loop
 
     loop:
@@ -58,7 +56,6 @@ Code Example
     body:
         %add = add i32 %load_i, 1
         store i32 %add, i32* %i
-
         br label %loop
 
     exit:

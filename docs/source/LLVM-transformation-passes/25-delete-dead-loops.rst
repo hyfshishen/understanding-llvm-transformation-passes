@@ -12,6 +12,7 @@ Code Example
 原始的 IR code。
 
 .. code-block:: llvm
+    :emphasize-lines: 2,3,4,5,6,7,8,9
 
     define i32 @foo(i32 %n) {
     loop:
