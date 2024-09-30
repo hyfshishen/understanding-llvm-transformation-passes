@@ -16,7 +16,7 @@ Code Example
 这里为了便捷只给 Code after ``-sora`` transformation 的例子，我们可以看到 ``Person`` 这个 struct 的 initialization 变成了两个 scalar（ ``%i`` 和 ``%sum_age`` ）的 ``alloca``。
 
 .. code-block:: llvm
-    :emphasize-lines: 4,5
+    :emphasize-lines: 5,6
 
     %struct.Person = type { i32, double }
 
