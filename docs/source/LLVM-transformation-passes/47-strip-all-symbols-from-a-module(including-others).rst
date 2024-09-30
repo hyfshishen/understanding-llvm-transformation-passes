@@ -12,7 +12,7 @@ Description
 3. Debug information
 
 其实对 code 的 functionality 和 performance 不会有任何影响，不过这个 pass 会让 code 变得非常不可读。
-所以其使用场景一般只会在：reducing code size，或者给 reverse engineering 制造麻烦🤣。
+所以其使用场景一般在：reducing code size，或者给 reverse engineering 制造麻烦🤣。
 
 类似 ``-strip`` 的 pass 还有好几个，这里顺带一起说了。
 
