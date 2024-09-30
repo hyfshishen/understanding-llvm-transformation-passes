@@ -14,4 +14,4 @@ Description
 Code Example
 --------
 
-因为是 ``-mem2reg`` 的 reverse 过程，所以这个 code example 直接读 ``-mem2reg`` 就好了（直接颠倒过来）。
+因为是 ``-mem2reg`` 的 reverse 过程，所以这个 code example 直接反过来读 ``-mem2reg`` 就好了。
