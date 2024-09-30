@@ -1,31 +1,15 @@
 ``-sink``: Code Sinking
 =====
 
+在了解这个 pass 之前需要学习的背景知识是 :doc:`../compiler-basics/lazy-code-motion`。
+
 Description
 --------
-假装这是一段解释。
+
+``-sink`` pass 尽可能地将当前 basic block 的 instructions 给 move 到其 successors 中，当然与此同时会考虑程序的正确性和安全性。
+其实也就是 :doc:`../compiler-basics/lazy-code-motion` 的 LLVM IR 版本了。
 
 Code Example
 --------
 
-假装这是一段example。
-
-.. code-block:: C
-
-    // original loop
-    int x;
-    for (x = 0; x < 100; x++)
-    {
-        delete(x);
-    }
-
-    // loop after unrolling (stride size = 4)
-    int x; 
-    for (x = 0; x < 100; x += 5 )
-    {
-        delete(x);
-        delete(x + 1);
-        delete(x + 2);
-        delete(x + 3);
-        delete(x + 4);
-    }
+例子可以看 background 部分，这里便不再赘述了。
