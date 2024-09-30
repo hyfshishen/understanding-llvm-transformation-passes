@@ -33,6 +33,7 @@ Code Example
 ``-loop-extract`` transform 过的 C code。
 
 .. code-block:: C
+    :emphasize-lines: 2
 
     int yafan(int yafan_paper_count) {
         yafan_paper_count = shihui(yafan_paper_count);
