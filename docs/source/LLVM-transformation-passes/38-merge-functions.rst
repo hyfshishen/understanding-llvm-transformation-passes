@@ -17,7 +17,7 @@ Description
 - 在一个只支持 64-bit 作为 minimal unit 的 machine，第一个 function 上开一个 64-integer 的 space，第二个 function 开一个 minimal unit 的 space；这两个 function 其实是一样的。
 - 两个 function 都以一个 integer 作为 argument，第一个 function 把这个 integer 乘2，第二个 function 把这个 integer 里所有的 bit 给 left shift 1；这两个 function 其实也是一样的。
 
-总而言之，这个 pass 所面对的情况非常复杂，LLVM 官方也对此写了非常详细的文档解释，可以查看 `LLVM Merge Functions <https://llvm.org/docs/MergeFunctions.html>`_
+总而言之，这个 pass 所面对的情况非常复杂，LLVM 官方也对此写了非常详细的文档解释，可以查看 `LLVM Merge Functions <https://llvm.org/docs/MergeFunctions.html>`_ 。
 
 Code Example
 --------
