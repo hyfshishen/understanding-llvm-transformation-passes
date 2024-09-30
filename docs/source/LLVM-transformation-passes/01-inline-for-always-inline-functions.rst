@@ -31,6 +31,7 @@ Code Example
 我们先把它变成 LLVM IR。
 
 .. code-block:: llvm
+    :emphasize-lines: 1,2,3,4,13
 
     define i32 @add(i32 %a, i32 %b) #0 {
         %1 = add i32 %a, %b
@@ -51,6 +52,7 @@ Code Example
 经过 ``-always-inline`` 之后，这个 IR 变成了。
 
 .. code-block:: llvm
+    :emphasize-lines: 7
 
     define i32 @main() #0 {
         %1 = alloca i32, align 4

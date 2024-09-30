@@ -22,6 +22,7 @@ Code Example
 原始的 IR code。
 
 .. code-block:: llvm
+    :emphasize-lines: 1,2,3
 
     define i32 @foo(i32* %a, i32* %b) {
         %1 = load i32, i32* %a
@@ -33,6 +34,7 @@ Code Example
 经过 ``-argpromotion`` 之后的 IR code。
 
 .. code-block:: llvm
+    :emphasize-lines: 1,2
 
     define i32 @foo(i32 %a, i32 %b) {
         %sum = add i32 %a, %b

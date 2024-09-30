@@ -50,6 +50,7 @@ Code Example
 ``-break-crit-edges`` transform 之后的 IR。
 
 .. code-block:: llvm
+    :emphasize-lines: 6,7
 
     define void @foo(i32 %a) {
     entry:

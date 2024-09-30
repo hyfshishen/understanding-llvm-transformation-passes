@@ -40,6 +40,7 @@ Code Example
 这是执行过 ``-block-placement`` 之后的 IR。假定我们已经 profile 过程序了， ``iffalse`` 是更容易执行的。
 
 .. code-block:: llvm
+    :emphasize-lines: 6,7,8
 
     define void @foo(i32 %a) {
     entry:

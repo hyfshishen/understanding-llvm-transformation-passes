@@ -19,7 +19,8 @@ Code Example
 下面是一段原始的 LLVM IR。
 
 .. code-block:: llvm
-
+    :emphasize-lines: 5
+    
     define i32 @foo(i32 %x, i32 %y) {
     entry:
         %a = add i32 %x, %y
