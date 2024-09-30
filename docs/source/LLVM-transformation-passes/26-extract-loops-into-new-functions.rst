@@ -20,6 +20,7 @@ Code Example
 原始的 C code。
 
 .. code-block:: C
+    :emphasize-lines: 2,3,4
 
     int yafan(int yafan_paper_count) {
         for(int i=0; i<100; i++) // Most outter loop in function

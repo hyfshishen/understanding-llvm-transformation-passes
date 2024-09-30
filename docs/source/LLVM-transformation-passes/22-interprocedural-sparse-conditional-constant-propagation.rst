@@ -13,7 +13,7 @@ Description
 Code Example
 --------
 
-LLVM tutorial 有个例子特别好，可以在这个 `Video Link <https://www.youtube.com/watch?v=I4Iv-HefknA>`_ 的 10:00 时刻找到，这里我们就直接拿来用了。 
+LLVM tutorial 有个例子很好，可以在这个 `Video Link <https://www.youtube.com/watch?v=I4Iv-HefknA>`_ 的 10:00 时刻找到，我也用这个例子了。 
 
 .. figure:: figures/ipsccp.png
    :alt: Interprocedural Sparse Conditional Constant Propagation

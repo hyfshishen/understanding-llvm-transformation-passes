@@ -18,6 +18,7 @@ Code Example
 原始的 C code。
 
 .. code-block:: C
+    :emphasize-lines: 3,5
 
     int i = 0;
     while( i < 10 ) {
@@ -29,6 +30,7 @@ Code Example
 ``-loop-reduce`` transform 过的 C code。
 
 .. code-block:: C
+    :emphasize-lines: 2,6
 
     int i = 0;
     int j = 2; // j = 3 * 0 + 2
