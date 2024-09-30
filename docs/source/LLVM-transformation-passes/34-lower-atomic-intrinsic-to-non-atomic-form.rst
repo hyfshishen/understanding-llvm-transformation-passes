@@ -18,6 +18,7 @@ Code Example
 原始的 IR code。
 
 .. code-block:: llvm
+    :emphasize-lines: 2
 
     define void @increment(int* %ptr) {
         %atomic_inc = atomicrmw add i32* %ptr, i32 1 seq_cst
@@ -27,6 +28,7 @@ Code Example
 ``-loweratomic`` transform 过的 IR code。
 
 .. code-block:: llvm
+    :emphasize-lines: 2,3,4
 
     define void @increment(int* %ptr) {
         %load = load i32, i32* %ptr

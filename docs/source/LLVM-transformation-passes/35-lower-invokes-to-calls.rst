@@ -53,6 +53,7 @@ Code Example
 原始的 IR code。
 
 .. code-block:: llvm
+    :emphasize-lines: 4,9,10,11
 
     declare void @callee()
 
@@ -70,6 +71,7 @@ Code Example
 ``-lowerinvoke`` transform 之后的 IR code。
 
 .. code-block:: llvm
+    :emphasize-lines: 5
 
     declare void @callee()
 
