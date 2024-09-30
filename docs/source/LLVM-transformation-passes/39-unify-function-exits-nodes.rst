@@ -17,6 +17,7 @@ Code Example
 给定原始的 IR code。
 
 .. code-block:: llvm
+    :emphasize-lines: 8,12
 
     define i32 @example_func(i32 %x) {
     entry:
@@ -35,6 +36,7 @@ Code Example
 ``-mergereturn`` transform 之后的 IR code 如下所示：
 
 .. code-block:: llvm
+    :emphasize-lines: 16
 
     define i32 @example_func(i32 %x) {
     entry:
