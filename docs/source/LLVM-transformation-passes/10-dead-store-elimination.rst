@@ -17,6 +17,7 @@ Code Example
 原始的 IR code。
 
 .. code-block:: llvm
+    :emphasize-lines: 3
 
     define i32 @example(i32 %a, i32 %b) {
         %sum = add i32 %a, %b   ; Compute the sum

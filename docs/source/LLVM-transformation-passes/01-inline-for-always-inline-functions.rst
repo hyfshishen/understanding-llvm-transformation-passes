@@ -52,7 +52,7 @@ Code Example
 经过 ``-always-inline`` 之后，这个 IR 变成了。
 
 .. code-block:: llvm
-    :emphasize-lines: 7
+    :emphasize-lines: 8
 
     define i32 @main() #0 {
         %1 = alloca i32, align 4

@@ -22,6 +22,7 @@ Code Example
 我们从第一个例子开始。
 
 .. code-block:: llvm
+    :emphasize-lines: 4,5
 
     ; Original IR code
     define i32 @foo(i32 %a, i32 %b) {
@@ -43,6 +44,7 @@ Code Example
 现在我们来看第二个例子。
 
 .. code-block:: llvm
+    :emphasize-lines: 3
 
     ; Original IR code
     define i32 @bar(i32 %x) {
