@@ -55,14 +55,12 @@ Contributing
 
 License
 --------
-
 UNLESS OTHERWISE NOTED, THE CONTENTS OF THIS REPOSITORY/DOCUMENT ARE LICENSED
 UNDER THE CREATIVE COMMONS ATTRIBUTION - SHARE ALIKE 4.0 INTERNATIONAL LICENSE
 
-.. figure:: https://i.creativecommons.org/l/by-sa/4.0/88x31.png
-   :alt: https://creativecommons.org/licenses/by-sa/4.0/
-
-   https://creativecommons.org/licenses/by-sa/4.0/
+.. image:: https://i.creativecommons.org/l/by-sa/4.0/88x31.png
+   :target: https://creativecommons.org/licenses/by-sa/4.0/
+   :alt: Creative Commons Attribution-ShareAlike 4.0 International License
    
 References
 --------
