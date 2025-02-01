@@ -145,5 +145,5 @@ Optional
 
 References
 --------
-.. [#ref1] LLVM Tutorial in CS:4980@UIowa: https://hyfshishen.github.io/tutorial-01-llvm.html
+.. [#ref1] LLVM Tutorial in CS:4980@UIowa: https://hyfshishen.github.io/blog/tutorial-llvm/
 .. [#ref2] Mapping High Level Constructs to LLVM IR: https://mapping-high-level-constructs-to-llvm-ir.readthedocs.io/en/latest/
